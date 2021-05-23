@@ -6,8 +6,7 @@ const sequelize = new Sequelize(process.env.DB, process.env.DB_USER, process.env
     dialect: 'postgres'
 })
 
-function sync() {
-    sequelize.authenticate().then(
+sequelize.authenticate().then(
     function success() {
         console.log("Connected to DB");
     },
@@ -16,7 +15,6 @@ function sync() {
         console.log(`Error: ${err}`);
     }
 )
-}
 
 
-module.exports = {sync}
+module.exports = sequelize

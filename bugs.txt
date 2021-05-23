@@ -1,3 +1,0 @@
-1. var router = Router() in usercontroller
-2.game and users DB function didnt export and didnt requier
-3. exoprt router
